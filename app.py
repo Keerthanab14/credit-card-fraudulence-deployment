@@ -2,7 +2,7 @@
 import streamlit as st
 import pickle as pickle
 import numpy as np
-model = pickle.load(open('C:/Users/kavya/AppData/Local/Programs/Python/Python36/Scripts/Technocolabs-credit_card_fraudulence/credit_card.pickle', 'rb'))
+model = pickle.load(open('credit_card.pickle', 'rb'))
 
 st.title("Credit Card Default Prediction")
 st.subheader("Please Enter the following details :")
