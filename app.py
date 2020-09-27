@@ -27,7 +27,8 @@ payment_status = st.selectbox('Payment status', [
                               )
 
 st.subheader("Bill Amount for past 6 months")
-b_month1 = st.number_input('Last month Bill amount (in NT dollar)')
+b_month1 = st.number_input('Last month Bill amount )
+b_month1.text('Last month Bill amount')
 b_month2 = st.number_input('Last 2nd month Bill amount (in NT dollar)')
 b_month3 = st.number_input('Last 3rd month Bill amount (in NT dollar)')
 b_month4 = st.number_input('Last 4th month Bill amount (in NT dollar)')
