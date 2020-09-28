@@ -2,7 +2,7 @@
 import streamlit as st
 import pickle as pickle
 import numpy as np
-model = pickle.load(open('credit_card.pickle', 'rb'))
+model = pickle.load(open('C:/Users/kavya/AppData/Local/Programs/Python/Python36/Scripts/Technocolabs-credit_card_fraudulence/credit_card.pickle', 'rb'))
 
 st.title("Credit Card Default Prediction")
 st.subheader("Please Enter the following details :")
@@ -27,8 +27,7 @@ payment_status = st.selectbox('Payment status', [
                               )
 
 st.subheader("Bill Amount for past 6 months")
-b_month1 = st.number_input('Last month Bill amount')
-b_month1.text('Last month Bill amount')
+b_month1 = st.number_input('Last month Bill amount (in NT dollar)')
 b_month2 = st.number_input('Last 2nd month Bill amount (in NT dollar)')
 b_month3 = st.number_input('Last 3rd month Bill amount (in NT dollar)')
 b_month4 = st.number_input('Last 4th month Bill amount (in NT dollar)')
@@ -90,7 +89,7 @@ st.markdown("""
 <style>
 body {
     color: #111;
-    background-color:#DBF3FA;
+    background: url(bg.jpg);
 }
 </style>
     """, unsafe_allow_html=True)
