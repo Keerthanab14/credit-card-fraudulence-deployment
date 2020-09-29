@@ -73,7 +73,7 @@ if st.button("Predict"):
     y = max(y)
     z = int(round(y * 100))
     if output == 1:
-        st.warning("This account might be defaulted with a probability of {}%.".format(z))
+        st.warning("This account will be defaulted with a probability of {}%.".format(z))
     else:
         st.success("This account might not be defaulted with a probability of {}%.".format(z))
         st.balloons()
@@ -85,8 +85,8 @@ st.sidebar.text(
 st.markdown("""
 <style>
 .sidebar .sidebar-content {
-    background-image: linear-gradient(#2e7bcf,#2e7bcf);
-    background-color:
+    background-image:
+    background-color:#CEDBD6;
     color: white;
     }
 body {
