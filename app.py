@@ -89,9 +89,9 @@ st.markdown("""
 <style>
 body {
     color: #111;
-    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.mybanktracker.com%2Fnews%2Fwp-content%2Fuploads%2F2016%2F11%2Fcredit-card-lock-1.jpg&imgrefurl=https%3A%2F%2Fwww.mybanktracker.com%2Fcredit-cards%2Fhow-to%2Fhow-to-detect-credit-card-fraud-262150&tbnid=eGVbEztV8azojM&vet=12ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygOegUIARC8AQ..i&docid=ibWAsM10qSZsVM&w=986&h=685&q=credit%20card%20fraud&ved=2ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygOegUIARC8AQ");
+    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5e7df71b08eb080006520247%2F960x0.jpg%3Ffit%3Dscale&imgrefurl=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fleemathews%2F2020%2F03%2F27%2Fa-massive-credit-card-fraud-ring-just-got-shut-down-by-russian-authorities%2F&tbnid=Ya7qrCNmQt3ruM&vet=12ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygKegUIARCzAQ..i&docid=sHA6cA4QKCGtMM&w=960&h=488&q=credit%20card%20fraud&ved=2ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygKegUIARCzAQ#imgrc=Ya7qrCNmQt3ruM&imgdii=t9SLR7tDyW9PvM");
     background-size: cover;
-    opacity: 0.5;
+    background-opacity: 0.5;
 }
 </style>
     """, unsafe_allow_html=True)
