@@ -1,3 +1,38 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Keerthanab14 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+Keerthanab14
+/
+credit-card-fraudulence-deployment
+Private
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+credit-card-fraudulence-deployment/app.py /
+@Keerthanab14
+Keerthanab14 Update app.py
+Latest commit fabe159 7 minutes ago
+ History
+ 1 contributor
+102 lines (90 sloc)  4.66 KB
+  
 
 import streamlit as st
 import pickle as pickle
@@ -73,31 +108,26 @@ if st.button("Predict"):
     y = max(y)
     z = int(round(y * 100))
     if x == 1:
-        st.warning("This account will be defaulted with a probability of {}%.".format(z))
+        st.warning("This account might be defaulted with a probability of {}%.".format(z))
     else:
-        st.success("This account will not be defaulted with a probability of {}%.".format(z))
+        st.success("This account might not be defaulted with a probability of {}%.".format(z))
         st.balloons()
 
-st.sidebar.header("About Project")
+st.sidebar.header("About this Project")
 st.sidebar.text(
-    " This project is all about predicting \n whether in the next month after the six\n month historical data period,\n an account owner has defaulted, or\n in other words,failed to make the \n minimum payment.\n It takes all the input mentioned\n beside and predicts the output")
+    " This project is about predicting \n whether in the next month after the six\n month historical data period,\n an account owner has defaulted, or\n in other words,failed to make the \n minimum payment.\n It takes all the input mentioned\n beside and predicts the output")
 
-st.sidebar.markdown("#### Done by: Bharath C S :smiley:")
-st.sidebar.markdown("#### This is part of Technocolab internship miniproject 2")
-
-def main():
-    """Credit card default"""
-
-    st.title("Credit card default detection")
-
-    html_temp = """
-    <body style="background-image:https://www.google.com/imgres?imgurl=https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5e7df71b08eb080006520247%2F960x0.jpg%3Ffit%3Dscale&imgrefurl=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fleemathews%2F2020%2F03%2F27%2Fa-massive-credit-card-fraud-ring-just-got-shut-down-by-russian-authorities%2F&tbnid=Ya7qrCNmQt3ruM&vet=12ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygKegUIARCzAQ..i&docid=sHA6cA4QKCGtMM&w=960&h=488&q=credit%20card%20fraud&ved=2ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygKegUIARCzAQ#imgrc=Ya7qrCNmQt3ruM&imgdii=t9SLR7tDyW9PvM;">
-    <div style="background-color:teal ;padding:10px">
-    <h2 style="color:white;text-align:center;">Face Recognition WebApp</h2>
-    </div>
-    </body>
-    """
-    st.markdown(html_temp, unsafe_allow_html=True)
-
-if __name__ == '__main__':
-    main()
+st.markdown("""
+<style>
+body {
+    color: #111;
+    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5e7df71b08eb080006520247%2F960x0.jpg%3Ffit%3Dscale&imgrefurl=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fleemathews%2F2020%2F03%2F27%2Fa-massive-credit-card-fraud-ring-just-got-shut-down-by-russian-authorities%2F&tbnid=Ya7qrCNmQt3ruM&vet=12ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygKegUIARCzAQ..i&docid=sHA6cA4QKCGtMM&w=960&h=488&q=credit%20card%20fraud&ved=2ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygKegUIARCzAQ#imgrc=Ya7qrCNmQt3ruM&imgdii=t9SLR7tDyW9PvM");
+    background-size: cover;
+    .sidebar .sidebar-content {
+    background-image: linear-gradient(#2e7bcf,#2e7bcf);
+    color: white;
+    }
+    background-opacity: 0.5;
+}
+</style>
+    """, unsafe_allow_html=True)
