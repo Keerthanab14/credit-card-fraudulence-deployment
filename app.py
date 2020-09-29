@@ -82,18 +82,30 @@ st.sidebar.header("About this App")
 st.sidebar.text(
     " This app predicts if the user will default \n the next month also based on the previous \n month payment and bill amount details")
 
-page_bg_img = '''
-<style>
-.sidebar .sidebar-content {
-    background-image:
-    background-color:#CEDBD6;
-    color: white;
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_png_as_page_bg(png_file):
+    bin_str = get_base64_of_bin_file(png_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
     }
-body {
-  background-image: url("https://unsplash.com/photos/Q59HmzK38eQ");
-  background-size: cover;
-  background-opacity: 0.5;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+    
+    .sidebar .sidebar-content {
+        background-image:
+        background-color:#8F8059;
+        color: white;
+    }
+    </style>
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
+
+set_png_as_page_bg('bg.png')
