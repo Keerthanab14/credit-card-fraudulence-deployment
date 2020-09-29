@@ -88,8 +88,8 @@ body {
 }
 .sidebar .sidebar-content {
         background-image:
-        background-color:#242526;
-        color: white;
+        background-color:#474D49;
+        color: black;
     }
 </style>
     """, unsafe_allow_html=True)
