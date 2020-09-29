@@ -89,7 +89,7 @@ body {
 .sidebar .sidebar-content {
         background-image:
         background-color:linear-gradient(#474D49,#474D49);
-        color: white;
+        color: black;
     }
 </style>
     """, unsafe_allow_html=True)
