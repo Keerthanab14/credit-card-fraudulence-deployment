@@ -89,7 +89,9 @@ st.markdown("""
 <style>
 body {
     color: #111;
-    background: url(bg.jpg);
+    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.mybanktracker.com%2Fnews%2Fwp-content%2Fuploads%2F2016%2F11%2Fcredit-card-lock-1.jpg&imgrefurl=https%3A%2F%2Fwww.mybanktracker.com%2Fcredit-cards%2Fhow-to%2Fhow-to-detect-credit-card-fraud-262150&tbnid=eGVbEztV8azojM&vet=12ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygOegUIARC8AQ..i&docid=ibWAsM10qSZsVM&w=986&h=685&q=credit%20card%20fraud&ved=2ahUKEwj6xd2Iwo3sAhWaeH0KHV25ClUQMygOegUIARC8AQ");
+    background-size: cover;
+    opacity: 0.5;
 }
 </style>
     """, unsafe_allow_html=True)
