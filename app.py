@@ -76,7 +76,7 @@ if st.button("Predict"):
         st.success("This account will not be defaulted with a probability of {}%.".format(z))
         st.balloons()
 
-st.sidebar.header("About this App")
+st.sidebar.header("     About this App")
 st.sidebar.text(
     " This app predicts if the user will \n default in the next month \n based on the previous month \n payment and bill amount details \n or in other words,\n failed to make the minimum payment.")
 
@@ -88,8 +88,8 @@ body {
 }
 .sidebar .sidebar-content {
         background-image:
-        background-color:#474D49;
-        color: black;
+        background-color:linear-gradient(#474D49,#474D49);
+        color: white;
     }
 </style>
     """, unsafe_allow_html=True)
