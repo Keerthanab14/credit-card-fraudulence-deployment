@@ -78,7 +78,7 @@ if st.button("Predict"):
 
 st.sidebar.header("About this App")
 st.sidebar.text(
-    " This app predicts if the user will default \n the next month also based on the previous \n month payment and bill amount details")
+    " This app predicts if the user will \n default in the next month \n based on the previous month \n payment and bill amount details \n or in other words,\n failed to make the minimum payment.")
 
 st.markdown("""
 <style>
@@ -88,7 +88,7 @@ body {
 }
 .sidebar .sidebar-content {
         background-image:
-        background-color:#423D11;
+        background-color:#242526;
         color: white;
     }
 </style>
