@@ -1,39 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Keerthanab14 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-Keerthanab14
-/
-credit-card-fraudulence-deployment
-Private
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-credit-card-fraudulence-deployment/app.py /
-@Keerthanab14
-Keerthanab14 Update app.py
-Latest commit fabe159 7 minutes ago
- History
- 1 contributor
-102 lines (90 sloc)  4.66 KB
-  
-
 import streamlit as st
 import pickle as pickle
 import numpy as np
@@ -41,6 +5,21 @@ model = pickle.load(open('credit_card.pickle', 'rb'))
 
 st.title("Credit Card Default Prediction")
 st.subheader("Please Enter the following details :")
+Education_inp = ["Graduate school", "University", "High school", "others"]
+Marriage_inp = ["Married", "Single", "Others"]
+Pay_status = [
+    "Account started that month with a zero balance, and never used any credit",
+    "Account had a balance that was paid in full",
+    "At least the minimum payment was made, but the entire balance wasn't paid",
+    "Payment delay for 1 month",
+    "Payment delay for 2 month",
+    "Payment delay for 3 month",
+    "Payment delay for 4 month",
+    "Payment delay for 5 month",
+    "Payment delay for 6 month",
+    "Payment delay for 7 month",
+    "Payment delay for 8 month",
+]
 
 limitbal = st.number_input('Limitbal')
 education = st.selectbox("Education ", ["Graduate school", "University", "High school", "others"])
@@ -77,23 +56,9 @@ p_month4 = st.number_input('Amount paid in 4th month (in NT dollar)')
 p_month5 = st.number_input('Amount paid in 5th month  (in NT dollar)')
 p_month6 = st.number_input('amount paid in 6th month (in NT dollar)')
 
-Education = ["Graduate school", "University", "High school", "others"]
-Marriage = ["Married", "Single", "Others"]
-Pay_status = [
-    "Account started that month with a zero balance, and never used any credit",
-    "Account had a balance that was paid in full",
-    "At least the minimum payment was made, but the entire balance wasn't paid",
-    "Payment delay for 1 month",
-    "Payment delay for 2 month",
-    "Payment delay for 3 month",
-    "Payment delay for 4 month",
-    "Payment delay for 5 month",
-    "Payment delay for 6 month",
-    "Payment delay for 7 month",
-    "Payment delay for 8 month",
-]
-edu = Education.index(education) + 1
-mar = Marriage.index(marriage) + 1
+
+edu = Education_inp.index(education) + 1
+mar = Marriage_inp.index(marriage) + 1
 stats = Pay_status.index(payment_status) - 2
 
 features = [int(limitbal), edu, mar, int(age), stats, int(b_month1), int(b_month2), int(b_month3), int(b_month4),
