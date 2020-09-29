@@ -22,8 +22,8 @@ Pay_status = [
 ]
 
 limitbal_value = st.number_input('Limitbal')
-education_index = st.selectbox("Education ", ["Graduate school", "University", "High school", "others"])
-edu = Education_inp.index(education) + 1
+education = st.selectbox("Education ", ["Graduate school", "University", "High school", "others"])
+education_index = Education_inp.index(education) + 1
 marriage = st.selectbox("Marriage", ["Married", "Single", "Others"])
 marriage_index = Marriage_inp.index(marriage) + 1
 age = st.number_input('Age in years')
